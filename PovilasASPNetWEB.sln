@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PovilasASPNetWEB.API", "PovilasASPNetWEB.API\PovilasASPNetWEB.API.csproj", "{3044027A-9321-4090-B903-176D21666DEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3044027A-9321-4090-B903-176D21666DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3044027A-9321-4090-B903-176D21666DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3044027A-9321-4090-B903-176D21666DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3044027A-9321-4090-B903-176D21666DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD588F7E-6CDA-4CA6-AEB6-95AE6C278755}
+	EndGlobalSection
+EndGlobal
