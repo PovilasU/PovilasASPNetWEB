@@ -87,3 +87,10 @@ export const fetchProductsWithPromises = () => {
       return [];
     });
 };
+
+export function loadProductsFromLocalStorage() {
+  const localData = localStorage.getItem("products");
+  if (localData) {
+    setProducts(JSON.parse(localData));
+  }
+};
