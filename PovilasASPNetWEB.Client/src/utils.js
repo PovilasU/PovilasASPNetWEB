@@ -1,11 +1,38 @@
+export const addProduct = async (newProduct, prevProducts) => {
+  //newProduct.id = generateId();
+  //newProduct.id = 11;
 
-// This function adds a new product to the list of existing products.
-// It assigns a unique id to the new product based on the current timestamp,
-// then returns a new array that includes all the previous products and the new product.
-export const addProduct = (newProduct, prevProducts) => {
-  newProduct.id = Date.now();
-  return [...prevProducts, newProduct];
+  try {
+    const data = await postProduct(newProduct);
+    console.log('Product added successfully');
+    return [...prevProducts, data];
+  } catch (error) {
+    console.error("Error:", error);
+    return [...prevProducts, newProduct];
+  }
 };
+
+function generateId() {
+  return Date.now();
+}
+
+async function postProduct(product) {
+  const response = await fetch("https://localhost:7020/api/Products", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(product),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    console.error('Error:', errorData);
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  return response.json();
+}
 
 // This function removes a product from the list of existing products.
 // It filters out the product with the given id, updates the products in local storage,

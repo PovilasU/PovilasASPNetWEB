@@ -6,8 +6,6 @@ import { handleInputChange, handleAddProduct } from "../utils";
 
 // We're creating a new component called AddProductRow. This component will be a row in a table where we can add a new product.
 const AddProductRow = ({ addProduct }) => {
-  // We're creating a "state" for our component. This is like a memory for our component where it can store values that it needs to remember.
-  // In this case, we're remembering the details of the new product that we're adding.
   const [newProduct, setNewProduct] = useState({
     name: "",
     description: "",

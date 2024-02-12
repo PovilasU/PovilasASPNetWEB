@@ -5,14 +5,7 @@ import React, { useState, useEffect } from "react";
 import EditableField from "./EditableField";
 import ActionButtons from "./ActionButtons";
 
-// We're creating a new component called ProductRow. This component will be a row in a table where we can display or edit a product.
-// This component receives several pieces of information (we call these "props"):
-// - product: the details of the product that we're displaying or editing
-// - removeProduct: a function that we call when we want to remove the product
-// - editProduct: a function that we call when we want to save our edits to the product
 const ProductRow = ({ product, removeProduct, editProduct }) => {
-  // We're creating a "state" for our component. This is like a memory for our component where it can store values that it needs to remember.
-  // In this case, we're remembering whether we're in editing mode or not, and the details of the product that we're editing.
   const [isEditing, setIsEditing] = useState(false);
   const [editedProduct, setEditedProduct] = useState(product);
 
@@ -43,9 +36,6 @@ const ProductRow = ({ product, removeProduct, editProduct }) => {
     // We're creating a row in a table.
     <tr>
       {fields.map((field) => (
-        // We're creating an EditableField component.
-        // We're passing several props to this component, including whether we're in editing mode, the name of the field, the current value of the field, and the function to call when the value changes.
-        // The EditableField component is being used here. This component likely represents a field that can be edited.
         <EditableField
           // The key prop is a special prop in React that helps it identify which items have changed, are added, or are removed. Here, it's value is the field name.
           key={field}
